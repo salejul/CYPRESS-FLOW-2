@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-27T20:50:32.678Z",
+    "end": "2020-04-27T20:50:34.404Z",
+    "duration": 1726,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ce37044-34ef-429f-b8d9-778594c149c0",
+      "title": "",
+      "fullFile": "cypress\\integration\\api\\rest-api-demo.spec.js",
+      "file": "cypress\\integration\\api\\rest-api-demo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f8b65e8a-0da0-41ac-8f57-fcc754cc6c04",
+          "title": "HTTP Example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TESTS GET METHOD",
+              "fullTitle": "HTTP Example TESTS GET METHOD",
+              "timedOut": null,
+              "duration": 1022,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://httpbin.org/get\"\n}).then(function (Response) {\n  expect(Response.body).to.have.property('url');\n});",
+              "err": {},
+              "uuid": "52067267-5b56-4b43-b015-81a971b120f3",
+              "parentUUID": "f8b65e8a-0da0-41ac-8f57-fcc754cc6c04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TESTS POST METHOD",
+              "fullTitle": "HTTP Example TESTS POST METHOD",
+              "timedOut": null,
+              "duration": 198,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://httpbin.org/post\",\n  body: {\n    \"name\": \"Mary\",\n    \"age\": 56\n  },\n  headers: {\n    \"content-type\": \"application/json\"\n  }\n}).then(function (Response) {\n  expect(Response.body).to.have.property('json');\n  expect(Response.body.json).to.deep.equal({\n    \"name\": \"Mary\",\n    \"age\": 56\n  });\n});",
+              "err": {},
+              "uuid": "31c19f87-d971-4b6e-81c9-dfec17f50cfe",
+              "parentUUID": "f8b65e8a-0da0-41ac-8f57-fcc754cc6c04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TESTS PUT METHOD",
+              "fullTitle": "HTTP Example TESTS PUT METHOD",
+              "timedOut": null,
+              "duration": 193,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"PUT\",\n  url: \"https://httpbin.org/put\",\n  body: {\n    \"name\": \"Marco\"\n  }\n}).then(function (Response) {\n  expect(Response.body).to.have.property('json');\n  expect(Response.body.json).to.deep.equal({\n    \"name\": \"Marco\"\n  });\n});",
+              "err": {},
+              "uuid": "e37b077b-e24b-4e3a-a673-88a901fc2025",
+              "parentUUID": "f8b65e8a-0da0-41ac-8f57-fcc754cc6c04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TESTS PATCH METHOD",
+              "fullTitle": "HTTP Example TESTS PATCH METHOD",
+              "timedOut": null,
+              "duration": 199,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"PATCH\",\n  url: \"https://httpbin.org/patch\",\n  body: {\n    \"name\": \"Marco 1\"\n  }\n}).then(function (Response) {\n  expect(Response.body).to.have.property('json');\n  expect(Response.body.json).to.deep.equal({\n    \"name\": \"Marco 1\"\n  });\n});",
+              "err": {},
+              "uuid": "562de210-d9fd-4842-bbbe-4a3b6ba03aa5",
+              "parentUUID": "f8b65e8a-0da0-41ac-8f57-fcc754cc6c04",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "52067267-5b56-4b43-b015-81a971b120f3",
+            "31c19f87-d971-4b6e-81c9-dfec17f50cfe",
+            "e37b077b-e24b-4e3a-a673-88a901fc2025",
+            "562de210-d9fd-4842-bbbe-4a3b6ba03aa5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

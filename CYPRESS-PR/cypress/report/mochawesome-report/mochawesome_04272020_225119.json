@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-27T20:51:16.242Z",
+    "end": "2020-04-27T20:51:19.815Z",
+    "duration": 3573,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73b9b24f-0c69-4311-9994-1b04247bd3a3",
+      "title": "",
+      "fullFile": "cypress\\integration\\e2e\\interactions.spec.js",
+      "file": "cypress\\integration\\e2e\\interactions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5e8b4819-2818-4182-9d93-95d552e10a01",
+          "title": "Basic page interactions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "sets the header text to the item's name when double clicked",
+              "fullTitle": "Basic page interactions sets the header text to the item's name when double clicked",
+              "timedOut": null,
+              "duration": 1880,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-1-items-list] > :nth-child(2)').dblclick();\ncy.get('[data-cy=box-1-selected-name]').invoke('text').should('equal', 'Option Two');",
+              "err": {},
+              "uuid": "b39396f3-e4c6-4a76-b3e1-9d66439b664a",
+              "parentUUID": "5e8b4819-2818-4182-9d93-95d552e10a01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "displays the correct count for the number of selected checkboxes",
+              "fullTitle": "Basic page interactions displays the correct count for the number of selected checkboxes",
+              "timedOut": null,
+              "duration": 510,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-2-checkboxes] > :nth-child(1) input').check();\ncy.get('[data-cy=box-2-selected-count]').invoke('text').should('equal', '1');",
+              "err": {},
+              "uuid": "5454750f-df52-4f40-9ad0-a1f11bece648",
+              "parentUUID": "5e8b4819-2818-4182-9d93-95d552e10a01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "displays the name of the currently selected item",
+              "fullTitle": "Basic page interactions displays the name of the currently selected item",
+              "timedOut": null,
+              "duration": 583,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-3-dropdown]').select('Option Three');\ncy.get('[data-cy=box-3-selected-name]').invoke('text').should('equal', 'Option Three');",
+              "err": {},
+              "uuid": "90bb7d35-f9b6-4710-9f6c-61c6f3d67244",
+              "parentUUID": "5e8b4819-2818-4182-9d93-95d552e10a01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display the name of the most recently hovered item",
+              "fullTitle": "Basic page interactions should display the name of the most recently hovered item",
+              "timedOut": null,
+              "duration": 361,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-4-items-list] > :nth-child(2)').trigger('mouseover');\ncy.get('[data-cy=box-4-selected-name]').invoke('text').should('equal', 'Option Two');",
+              "err": {},
+              "uuid": "2b7e2e82-d5c9-4761-b6bd-2f960d3c2b0b",
+              "parentUUID": "5e8b4819-2818-4182-9d93-95d552e10a01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b39396f3-e4c6-4a76-b3e1-9d66439b664a",
+            "5454750f-df52-4f40-9ad0-a1f11bece648",
+            "90bb7d35-f9b6-4710-9f6c-61c6f3d67244",
+            "2b7e2e82-d5c9-4761-b6bd-2f960d3c2b0b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3334,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

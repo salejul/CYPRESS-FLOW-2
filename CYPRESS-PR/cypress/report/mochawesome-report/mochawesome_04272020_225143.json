@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-27T20:51:40.569Z",
+    "end": "2020-04-27T20:51:43.342Z",
+    "duration": 2773,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9fa1c9bb-25a8-41c9-bbf8-5a3a12c08f8c",
+      "title": "",
+      "fullFile": "cypress\\integration\\e2e\\selecting.spec.js",
+      "file": "cypress\\integration\\e2e\\selecting.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e9275435-610b-4c3b-b48f-aa7445c44f94",
+          "title": "Text box with max characters",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays the appropriate remaining characters count",
+              "fullTitle": "Text box with max characters displays the appropriate remaining characters count",
+              "timedOut": null,
+              "duration": 1763,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/example-3');\ncy.get('[data-cy=\"last-name-chars-left-count\"]').invoke('text').should('equal', '15');\ncy.get('[data-cy=\"input-last-name\"]').type('hello');\ncy.get('[data-cy=\"last-name-chars-left-count\"]').invoke('text').should('equal', '10');\ncy.get('[data-cy=\"input-last-name\"]').type(' my friend');\ncy.get('[data-cy=\"last-name-chars-left-count\"]').invoke('text').should('equal', '0');",
+              "err": {},
+              "uuid": "c4eb6266-7818-4fba-88a0-17e925fe0256",
+              "parentUUID": "e9275435-610b-4c3b-b48f-aa7445c44f94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prevents the user from typing more characters once max is exceeded",
+              "fullTitle": "Text box with max characters prevents the user from typing more characters once max is exceeded",
+              "timedOut": null,
+              "duration": 844,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/example-3');\ncy.get('[data-cy=\"input-last-name\"]').type('abcdefghijklmnopqrstuvwxyz');\ncy.get('[data-cy=\"input-last-name\"]').should('have.attr', 'value', 'abcdefghijklmno');",
+              "err": {},
+              "uuid": "c5caeb21-1194-47e4-928b-0f13524f6961",
+              "parentUUID": "e9275435-610b-4c3b-b48f-aa7445c44f94",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c4eb6266-7818-4fba-88a0-17e925fe0256",
+            "c5caeb21-1194-47e4-928b-0f13524f6961"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2607,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

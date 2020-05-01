@@ -1,0 +1,30 @@
+{
+	"name": "cypress-pr",
+	"version": "1.0.0",
+	"description": "cypress framework page object model",
+	"main": "index.js",
+	"scripts": {
+		"cy:open": "cypress open",
+		"cy:run": "cypress run",
+		"cy:update-snapshots": "cypress run --env updateSnapshots=true",
+		"cy:report": "cypress run --reporter mochawesome"
+	},
+	"keywords": [
+		"pom",
+		"cypress"
+	],
+	"author": "Aleksandar Julovski",
+	"license": "ISC",
+	"dependencies": {
+		"@types/cypress-image-snapshot": "^3.1.2",
+		"cypress-image-snapshot": "^3.1.1",
+		"prettier": "^2.0.5"
+	},
+	"devDependencies": {
+		"cypress": "^4.4.1",
+		"cypress-failed-log": "^2.6.2",
+		"mocha": "^7.1.2",
+		"mochawesome": "^6.1.1",
+		"mochawesome-merge": "^4.0.3"
+	}
+}

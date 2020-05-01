@@ -1,0 +1,184 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-27T20:51:05.797Z",
+    "end": "2020-04-27T20:51:11.150Z",
+    "duration": 5353,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37497056-fd33-430b-9634-dc9de3410ec6",
+      "title": "",
+      "fullFile": "cypress\\integration\\e2e\\first-test-myyy.spec.js",
+      "file": "cypress\\integration\\e2e\\first-test-myyy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9033e172-25c7-48d7-a44e-e288b64566c6",
+          "title": "Heading text",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "contains the correct title",
+              "fullTitle": "Heading text contains the correct title",
+              "timedOut": null,
+              "duration": 2427,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.title().should('eq', 'React App');\ncy.get('[href=\"/example-1\"] > .sc-VigVT').click();\ncy.get('h1').invoke('text').should('eq', 'My Awesome Web Application');",
+              "err": {},
+              "uuid": "b21f4007-c3e8-4c74-a727-2f671ef1a4da",
+              "parentUUID": "9033e172-25c7-48d7-a44e-e288b64566c6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b21f4007-c3e8-4c74-a727-2f671ef1a4da"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2427,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "83ee86ca-1213-4a45-8e5b-e98e1ad60bf9",
+          "title": "Max char input Example 2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Displays the appropriate remaining characters count",
+              "fullTitle": "Max char input Example 2 Displays the appropriate remaining characters count",
+              "timedOut": null,
+              "duration": 1015,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.title().should('eq', 'React App');\ncy.get('[href=\"/example-2\"] > .sc-VigVT').click();\ncy.get('span').invoke('text').should('eq', '15');\ncy.get('input').type('ABCDEFGHI...');\ncy.get('span').invoke('text').should('eq', '3');\ncy.get('input').type('...');\ncy.get('span').invoke('text').should('eq', '0');",
+              "err": {},
+              "uuid": "716d7e56-7cd5-4af6-8667-c9c1934d6b21",
+              "parentUUID": "83ee86ca-1213-4a45-8e5b-e98e1ad60bf9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "716d7e56-7cd5-4af6-8667-c9c1934d6b21"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1015,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "ed8a955c-04d7-4ce9-b32f-e381271d65e7",
+          "title": "Max char input Example 3",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Displays the appropriate remaining characters count",
+              "fullTitle": "Max char input Example 3 Displays the appropriate remaining characters count",
+              "timedOut": null,
+              "duration": 1780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.title().should('eq', 'React App');\ncy.get('[href=\"/example-3\"] > .sc-VigVT').click();\ncy.url().should('include', '/example-3');\ncy.get('[data-cy=\"first-name-chars-left-count\"]').as('FNameCharsCount');\ncy.get('[data-cy=\"last-name-chars-left-count\"]').as('LNameCharsCount');\ncy.get('[data-cy=\"input-first-name\"]').as('FNameInput');\ncy.get('[data-cy=\"input-last-name\"]').as('LNameInput');\ncy.get('@FNameCharsCount').invoke('text').should('eq', '15');\ncy.get('@LNameCharsCount').invoke('text').should('eq', '15');\ncy.get('@FNameInput').type('ABCDEFGHI...');\ncy.get('@LNameInput').type('ABCDEFGHI...');\ncy.get('@FNameCharsCount').invoke('text').should('eq', '3');\ncy.get('@LNameCharsCount').invoke('text').should('eq', '3');\ncy.get('@FNameInput').type('...');\ncy.get('@LNameInput').type('...');\ncy.get('@FNameCharsCount').invoke('text').should('eq', '0');\ncy.get('@LNameCharsCount').invoke('text').should('eq', '0');",
+              "err": {},
+              "uuid": "ddf13c44-bb42-4cd6-8eba-dd201c212fd7",
+              "parentUUID": "ed8a955c-04d7-4ce9-b32f-e381271d65e7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ddf13c44-bb42-4cd6-8eba-dd201c212fd7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

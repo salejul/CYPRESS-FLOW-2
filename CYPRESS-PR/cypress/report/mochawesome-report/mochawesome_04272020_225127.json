@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-27T20:51:24.978Z",
+    "end": "2020-04-27T20:51:27.761Z",
+    "duration": 2783,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "603d3e5e-329b-4277-9eb2-7af68f09ef61",
+      "title": "",
+      "fullFile": "cypress\\integration\\e2e\\max_char_input.spec.js",
+      "file": "cypress\\integration\\e2e\\max_char_input.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "69fcf0df-38b1-4783-8d25-4b6a7d29b87d",
+          "title": "Text box with max characters",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays the appropriate remaining characters count",
+              "fullTitle": "Text box with max characters displays the appropriate remaining characters count",
+              "timedOut": null,
+              "duration": 1755,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/example-2');\ncy.get('span').invoke('text').should('equal', '15');\ncy.get('input').type('hello');\ncy.get('span').invoke('text').should('equal', '10');\ncy.get('input').type(' my friend');\ncy.get('span').invoke('text').should('equal', '0');",
+              "err": {},
+              "uuid": "bd8f2870-282b-4b5d-8c73-5a657ae81805",
+              "parentUUID": "69fcf0df-38b1-4783-8d25-4b6a7d29b87d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prevents the user from typing more characters once max is exceeded",
+              "fullTitle": "Text box with max characters prevents the user from typing more characters once max is exceeded",
+              "timedOut": null,
+              "duration": 940,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/example-2');\ncy.get('input').type('abcdefghijklmnopqrstuvwxyz');\ncy.get('input').should('have.attr', 'value', 'abcdefghijklmno');",
+              "err": {},
+              "uuid": "ca77c33d-b448-4f1b-bb18-1fedd3b74162",
+              "parentUUID": "69fcf0df-38b1-4783-8d25-4b6a7d29b87d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bd8f2870-282b-4b5d-8c73-5a657ae81805",
+            "ca77c33d-b448-4f1b-bb18-1fedd3b74162"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2695,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

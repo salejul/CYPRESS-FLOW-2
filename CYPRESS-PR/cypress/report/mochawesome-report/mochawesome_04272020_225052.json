@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-27T20:50:49.119Z",
+    "end": "2020-04-27T20:50:52.528Z",
+    "duration": 3409,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7ac1709b-c918-4a1a-b6a0-eb787698ed52",
+      "title": "",
+      "fullFile": "cypress\\integration\\e2e\\before-each.spec.js",
+      "file": "cypress\\integration\\e2e\\before-each.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94f9e658-2a55-441f-bd20-59d7198b19f1",
+          "title": "Text box with max characters",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "displays the appropriate remaining characters count",
+              "fullTitle": "Text box with max characters displays the appropriate remaining characters count",
+              "timedOut": null,
+              "duration": 2276,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@charsLeftSpan').invoke('text').should('equal', '15');\ncy.get('@charInput').type('hello');\ncy.get('@charsLeftSpan').invoke('text').should('equal', '10');\ncy.get('@charInput').type(' my friend');\ncy.get('@charsLeftSpan').invoke('text').should('equal', '0');",
+              "err": {},
+              "uuid": "416111c9-1f15-4ba6-b8f9-ddf8b7ba4017",
+              "parentUUID": "94f9e658-2a55-441f-bd20-59d7198b19f1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prevents the user from typing more characters once max is exceeded",
+              "fullTitle": "Text box with max characters prevents the user from typing more characters once max is exceeded",
+              "timedOut": null,
+              "duration": 964,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@charInput').type('abcdefghijklmnopqrstuvwxyz');\ncy.get('@charInput').should('have.attr', 'value', 'abcdefghijklmno');",
+              "err": {},
+              "uuid": "f76ba46a-1721-4864-9787-b80bb0769b34",
+              "parentUUID": "94f9e658-2a55-441f-bd20-59d7198b19f1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "416111c9-1f15-4ba6-b8f9-ddf8b7ba4017",
+            "f76ba46a-1721-4864-9787-b80bb0769b34"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3240,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
